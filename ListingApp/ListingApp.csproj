@@ -99,7 +99,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\FavoritesController.cs" />
-    <Compile Include="Controllers\MessageHistoriesController.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -107,30 +106,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ListingAppDataContext.cs" />
-    <Compile Include="Migrations\201706012029067_Pass1.cs" />
-    <Compile Include="Migrations\201706012029067_Pass1.Designer.cs">
-      <DependentUpon>201706012029067_Pass1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012051147_Pass2.cs" />
-    <Compile Include="Migrations\201706012051147_Pass2.Designer.cs">
-      <DependentUpon>201706012051147_Pass2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012102171_Pass3.cs" />
-    <Compile Include="Migrations\201706012102171_Pass3.Designer.cs">
-      <DependentUpon>201706012102171_Pass3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012124238_Pass4.cs" />
-    <Compile Include="Migrations\201706012124238_Pass4.Designer.cs">
-      <DependentUpon>201706012124238_Pass4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706012203487_Pass5.cs" />
-    <Compile Include="Migrations\201706012203487_Pass5.Designer.cs">
-      <DependentUpon>201706012203487_Pass5.cs</DependentUpon>
+    <Compile Include="Migrations\201706060146518_Pass1.cs" />
+    <Compile Include="Migrations\201706060146518_Pass1.Designer.cs">
+      <DependentUpon>201706060146518_Pass1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Favorite.cs" />
-    <Compile Include="Models\MessageHistory.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\User.cs" />
@@ -149,20 +131,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706012029067_Pass1.resx">
-      <DependentUpon>201706012029067_Pass1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012051147_Pass2.resx">
-      <DependentUpon>201706012051147_Pass2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012102171_Pass3.resx">
-      <DependentUpon>201706012102171_Pass3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012124238_Pass4.resx">
-      <DependentUpon>201706012124238_Pass4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706012203487_Pass5.resx">
-      <DependentUpon>201706012203487_Pass5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706060146518_Pass1.resx">
+      <DependentUpon>201706060146518_Pass1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

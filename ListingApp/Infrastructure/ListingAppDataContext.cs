@@ -14,21 +14,10 @@ namespace ListingApp.Infrastructure
 
         }
 
-        public DbSet<Message> Messages { get; set; }
 
-        public DbSet<MessageHistory> MessageHistories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Message>()
-                .HasMany<MessageHistory>(m => m.MessageHistories)
-                .WithMany(ms => ms.Messages)
-                .Map(mms =>
-                {
-                    mms.MapLeftKey("MessageId");
-                    mms.MapRightKey("MessageHistoriesId");
-                    mms.ToTable("MessageHistoryTable");
-                });
 
             modelBuilder.Entity<User>()
                 .HasMany<Product>(p => p.Products)
@@ -39,7 +28,6 @@ namespace ListingApp.Infrastructure
                 .WithMany(f => f.Favorites);
 
             modelBuilder.Entity<Product>()
-                //.HasOptional<Product>(p => p.Product)
                 .HasMany(c => c.Categories)
                 .WithMany(p => p.Products);
 
@@ -58,5 +46,7 @@ namespace ListingApp.Infrastructure
 
         public System.Data.Entity.DbSet<ListingApp.Models.User> Users { get; set; }
 
-      }
+        public DbSet<Message> Messages { get; set; }
+
+    }
 }

@@ -7,13 +7,13 @@ namespace ListingApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Pass3 : IMigrationMetadata
+    public sealed partial class Pass1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Pass3));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Pass1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706012102171_Pass3"; }
+            get { return "201706060146518_Pass1"; }
         }
         
         string IMigrationMetadata.Source

@@ -21,6 +21,7 @@ namespace ListingApp
             var settings = jsonFormatter.SerializerSettings;
             settings.Formatting = Formatting.Indented;
             settings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            formatters.JsonFormatter.S‌​erializerSettings.Re‌​ferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
             //CORS
             var corsAttr = new EnableCorsAttribute("http://localhost:8080", "*", "*");
