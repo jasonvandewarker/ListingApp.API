@@ -106,9 +106,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ListingAppDataContext.cs" />
-    <Compile Include="Migrations\201706060146518_Pass1.cs" />
-    <Compile Include="Migrations\201706060146518_Pass1.Designer.cs">
-      <DependentUpon>201706060146518_Pass1.cs</DependentUpon>
+    <Compile Include="Migrations\201706091742185_Pass1.cs" />
+    <Compile Include="Migrations\201706091742185_Pass1.Designer.cs">
+      <DependentUpon>201706091742185_Pass1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -131,8 +131,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706060146518_Pass1.resx">
-      <DependentUpon>201706060146518_Pass1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706091742185_Pass1.resx">
+      <DependentUpon>201706091742185_Pass1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

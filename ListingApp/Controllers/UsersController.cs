@@ -36,6 +36,29 @@ namespace ListingApp.Controllers
             return Ok(user);
         }
 
+        [HttpGet]
+        [Route("api/Users/UserSearch")]
+        public IHttpActionResult GetUserId(string password, string email)
+        {
+            //User userId = null;
+
+            if (email != null && password != null)
+            {
+                var userId = from u in db.Users
+                             where u.Email == email &&
+                             u.Password == password
+                             select new { UserId = u.UserId };
+
+            return Ok(userId);
+            }
+            return NotFound();           
+        }
+
+
+
+
+
+
         // PUT: api/Users/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutUser(int id, User user)

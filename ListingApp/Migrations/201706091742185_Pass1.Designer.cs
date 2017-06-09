@@ -13,7 +13,7 @@ namespace ListingApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706060146518_Pass1"; }
+            get { return "201706091742185_Pass1"; }
         }
         
         string IMigrationMetadata.Source

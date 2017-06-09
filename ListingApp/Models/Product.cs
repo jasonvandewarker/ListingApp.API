@@ -10,11 +10,14 @@ namespace ListingApp.Models
     {
         public int ProductId { get; set; }
         public int CategoryId { get; set; }
+        public string ProductName { get; set; }
+        public string Condition { get; set; }
         public string ProductDescription { get; set; }
         public decimal Price { get; set; }
+        public string Image { get; set; }
 
         public virtual ICollection<User> Users { get; set; }
-        public virtual ICollection<Category> Categories { get; set; }
+        public ICollection<Category> Categories { get; set; }
 
     }
 }

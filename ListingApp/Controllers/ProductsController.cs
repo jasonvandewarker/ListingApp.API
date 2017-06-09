@@ -36,6 +36,31 @@ namespace ListingApp.Controllers
             return Ok(product);
         }
 
+        [HttpGet]
+        [Route("api/Products/GetProductByCategory")]
+        public IHttpActionResult GetProductByCat(int categoryId)
+        {       
+                var productId = from p in db.Products
+                                where p.CategoryId == categoryId
+                                select p;
+                                return Ok(productId);           
+        }
+      
+
+        //Product Details
+        [HttpGet]
+        [Route("api/Products/ProductDetails")]
+        public IQueryable<Product> ProductDetails([FromUri] int search)
+        {
+            IQueryable<Product> getProductDetails = db.Products;
+       
+            getProductDetails = getProductDetails.Where(d => d.ProductId == search);
+ 
+            return (getProductDetails);
+
+        }
+
+
         // PUT: api/Products/5
         [ResponseType(typeof(void))]
         public IHttpActionResult PutProduct(int id, Product product)
