@@ -31,9 +31,9 @@ namespace ListingApp.Infrastructure
                 .HasMany(c => c.Categories)
                 .WithMany(p => p.Products);
 
-            modelBuilder.Entity<Message>()
-                .HasRequired<User>(u => u.User)
-                .WithMany(m => m.Messages);
+            //modelBuilder.Entity<Message>()
+            //    .HasRequired<User>(u => u.User)
+            //    .WithMany(m => m.Messages);
 
             base.OnModelCreating(modelBuilder);
         }

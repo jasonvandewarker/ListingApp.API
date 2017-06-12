@@ -110,6 +110,10 @@
     <Compile Include="Migrations\201706091742185_Pass1.Designer.cs">
       <DependentUpon>201706091742185_Pass1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706122038263_Pass2.cs" />
+    <Compile Include="Migrations\201706122038263_Pass2.Designer.cs">
+      <DependentUpon>201706122038263_Pass2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Favorite.cs" />
@@ -133,6 +137,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706091742185_Pass1.resx">
       <DependentUpon>201706091742185_Pass1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706122038263_Pass2.resx">
+      <DependentUpon>201706122038263_Pass2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

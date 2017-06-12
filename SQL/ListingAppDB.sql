@@ -27,22 +27,22 @@ GO
 insert into dbo.Products (CategoryId, ProductDescription, Price) VALUES ((SELECT C.CategoryId FROM Categories C WHERE C.CategoryDescription = 'Phones'), 'iPhone 9', 795.00)
 GO
 
-Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, User_UserId, IsRead) VALUES
-('Message Subject 1', 'Is this car still for sale?', GETDATE(), 
-(SELECT P.ProductId FROM Products P INNER JOIN Categories C ON C.CategoryId =  P.CategoryId WHERE C.CategoryDescription = 'Cars'),
-(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0)
-GO
-
-Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, User_UserId, IsRead) VALUES
-('Message Subject 2', 'Is this b ook still for sale?', GETDATE(), 
-(SELECT P.ProductId FROM Products P INNER JOIN Categories C ON C.CategoryId =  P.CategoryId WHERE C.CategoryDescription = 'Books'),
-(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0)
-GO
-
-Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, User_UserId, IsRead) VALUES
-('Message Subject 3', 'Is this phone still for sale?', GETDATE(), 
+Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, UserId, IsRead, ToUserId) VALUES
+('Message Subject 1', 'Is this phone still available?', GETDATE(), 
 (SELECT P.ProductId FROM Products P INNER JOIN Categories C ON C.CategoryId =  P.CategoryId WHERE C.CategoryDescription = 'Phones'),
-(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0)
+(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0, (SELECT U.UserId FROM Users U WHERE U.UserName = 'Jim Yahnke'))
+GO
+
+Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, UserId, IsRead, ToUserId) VALUES
+('Message Subject 2', 'Still for sale??', GETDATE(), 
+(SELECT P.ProductId FROM Products P INNER JOIN Categories C ON C.CategoryId =  P.CategoryId WHERE C.CategoryDescription = 'Phones'),
+(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0, (SELECT U.UserId FROM Users U WHERE U.UserName = 'Jim Yahnke'))
+GO
+
+Insert into dbo.Messages(Subject, MessageText, DateCreated, ProductId, UserId, IsRead, ToUserId) VALUES
+('Message Subject 3', 'Is this phone still for sale I will give you plenty?', GETDATE(), 
+(SELECT P.ProductId FROM Products P INNER JOIN Categories C ON C.CategoryId =  P.CategoryId WHERE C.CategoryDescription = 'Phones'),
+(SELECT U.UserId FROM Users U WHERE U.UserName = 'Homer Simpson'), 0, (SELECT U.UserId FROM Users U WHERE U.UserName = 'Jim Yahnke'))
 GO
 
 SELECT * FROM Users
