@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+//using ListingApp.Migrations;
 
 namespace ListingApp.Infrastructure
 {
@@ -11,7 +12,7 @@ namespace ListingApp.Infrastructure
     {
         public ListingAppDataContext() : base("ListingAppDB")
         {
-
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<ListingAppDataContext, Configuration>());
         }
 
 

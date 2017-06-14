@@ -102,6 +102,20 @@ namespace ListingApp.Controllers
             return Ok(message);
         }
 
+        [HttpGet]
+        [Route("api/Messages/GetReceivedMessages")]
+        public IHttpActionResult GetReceivedMessages(int ToUserId)
+        {
+            var messages = from m in db.Messages
+                where m.ToUserId == ToUserId
+                select m;
+
+            if (messages != null)
+                return Ok(messages);
+            else
+                return NotFound();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

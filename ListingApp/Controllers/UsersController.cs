@@ -47,7 +47,7 @@ namespace ListingApp.Controllers
                 var userId = from u in db.Users
                              where u.Email == email &&
                              u.Password == password
-                             select new { UserId = u.UserId };
+                             select u; //new { UserId = u.UserId };
 
             return Ok(userId);
             }

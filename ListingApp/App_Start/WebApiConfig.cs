@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
